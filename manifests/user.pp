@@ -73,9 +73,8 @@ define account::user (
   realize Account::Group[$groups]
 
   # Create the user's group
-  group { $username:
-    ensure => present,
-    gid    => $uid,
+  account::group { $username:
+    gid => $uid,
   }
 
   # Create the user
