@@ -8,11 +8,14 @@
 # - http://blog.scottlowe.org/2012/11/25/using-puppet-for-account-management
 #
 # === Parameters
-#
+# 
 # [*uid*]
 #   The user's uid. Mandatory argument. This can be a real pain in existing systems where changing a user's uid can
 #   bring havoc, but that may be fixed in a later version since it's also very useful to keep the same uids across
 #   systems.
+#
+# [*ensure*]
+#   User ensure (present or absent) Default to present
 #
 # [*password*]
 #   The user's password (as a hash). You can generate a password hash with `mkpasswd -m sha-512`.
@@ -62,6 +65,7 @@
 define account::user (
   $uid,
   $password,
+  $ensure       = 'present',
   $username     = $title,
   $full_name    = '',
   $email        = '',
@@ -84,7 +88,7 @@ define account::user (
 
   # Create the user
   user { $username:
-    ensure     => present,
+    ensure     => $ensure,
     password   => $password,
     uid        => $uid,
     gid        => $username,
