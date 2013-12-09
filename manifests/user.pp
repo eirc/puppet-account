@@ -27,6 +27,10 @@
 #   The email of the user. Will be used as the user comment along with full_name and as the ssh_key comment (if one is
 #   provided). Defaults to '/bin/bash'.
 #
+# [*expiry*]
+#   The expiry date for this user. Must be provided in a zero-padded YYYY-MM-DD format (e.g. 2010-02-19).
+#   Default to absent (the user account does never expire).
+#
 # [*shell*]
 #   The prefered shell of the user. Defaults to '/bin/bash'.
 #
@@ -61,6 +65,7 @@ define account::user (
   $username     = $title,
   $full_name    = '',
   $email        = '',
+  $expiry       = 'absent',
   $shell        = '/bin/bash',
   $groups       = [ ],
   $ssh_key      = '',
@@ -88,6 +93,7 @@ define account::user (
     home       => $homedir,
     managehome => true,
     comment    => $comment,
+    expiry     => $expiry,
     require    => [ Group[$username], Group[$groups] ],
   }
 
