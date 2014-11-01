@@ -119,12 +119,12 @@ describe 'account::user' do
   context 'with ssh_key param' do
     let(:params) { {:uid => 1000, :password => 'password', :email => 'email@example.com', :ssh_key => 'ssh-key', :ssh_key_type => 'rsa'} }
 
-    it { should contain_ssh_authorized_key('dude') }
-    it { should contain_ssh_authorized_key('dude').with_ensure 'present' }
-    it { should contain_ssh_authorized_key('dude').with_key 'ssh-key' }
-    it { should contain_ssh_authorized_key('dude').with_type 'rsa' }
-    it { should contain_ssh_authorized_key('dude').with_user 'dude' }
-    it { should contain_ssh_authorized_key('dude').that_requires 'File[/home/dude/.ssh/authorized_keys]' }
+    it { should contain_ssh_authorized_key('dude-email@example.com-key') }
+    it { should contain_ssh_authorized_key('dude-email@example.com-key').with_ensure 'present' }
+    it { should contain_ssh_authorized_key('dude-email@example.com-key').with_key 'ssh-key' }
+    it { should contain_ssh_authorized_key('dude-email@example.com-key').with_type 'rsa' }
+    it { should contain_ssh_authorized_key('dude-email@example.com-key').with_user 'dude' }
+    it { should contain_ssh_authorized_key('dude-email@example.com-key').that_requires 'File[/home/dude/.ssh/authorized_keys]' }
 
     context 'without email param' do
       let(:params) { {:uid => 1000, :password => 'password', :ssh_key => 'ssh-key', :ssh_key_type => 'rsa'} }

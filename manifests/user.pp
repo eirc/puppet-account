@@ -133,8 +133,9 @@ define account::user (
       fail('You must provide an ssh key type if you provide an ssh key!')
     }
 
-    ssh_authorized_key { $username:
+    ssh_authorized_key { "${username}-${email}-key":
       ensure  => present,
+      name    => $email,
       key     => $ssh_key,
       type    => $ssh_key_type,
       user    => $username,
