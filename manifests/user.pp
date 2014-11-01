@@ -117,7 +117,7 @@ define account::user (
 
   # And an authorized_keys file with proper permissions
   file { "${homedir}/.ssh/authorized_keys":
-    ensure  => present,
+    ensure  => file,
     owner   => $username,
     group   => $username,
     mode    => '0600',

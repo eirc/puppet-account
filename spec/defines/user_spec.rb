@@ -35,7 +35,7 @@ describe 'account::user' do
   it { should contain_file('/home/dude/.ssh').that_requires 'File[/home/dude]' }
 
   it { should contain_file('/home/dude/.ssh/authorized_keys') }
-  it { should contain_file('/home/dude/.ssh/authorized_keys').with_ensure 'present' }
+  it { should contain_file('/home/dude/.ssh/authorized_keys').with_ensure 'file' }
   it { should contain_file('/home/dude/.ssh/authorized_keys').with_owner 'dude' }
   it { should contain_file('/home/dude/.ssh/authorized_keys').with_group 'dude' }
   it { should contain_file('/home/dude/.ssh/authorized_keys').with_mode '0600' }
