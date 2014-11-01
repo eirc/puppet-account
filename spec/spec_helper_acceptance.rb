@@ -14,7 +14,7 @@ RSpec.configure do |c|
 
   c.formatter = :documentation
   c.before :suite do
-    # puppet_module_install(:source => proj_root, :module_name => 'module name') XXX
+    puppet_module_install(:source => proj_root, :module_name => 'account')
   end
 end
 
