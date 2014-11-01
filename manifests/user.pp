@@ -91,7 +91,7 @@ define account::user (
     groups     => $groups,
     shell      => $shell,
     home       => $homedir,
-    managehome => true,
+    managehome => false,
     comment    => $comment,
     expiry     => $expiry,
     require    => [ Group[$username], Group[$groups] ],
