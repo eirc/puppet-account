@@ -3,9 +3,16 @@
     "version": "0.1.0",
     "author": "eirc",
     "summary": "Helpers for managing users and groups with puppet.",
+    "tags": [ "user", "group", "account", "debian", "ssh" ],
     "license": "Apache License, Version 2.0",
     "source": "https://github.com/eirc/puppet-account",
     "project_page": "https://github.com/eirc/puppet-account",
     "issues_url": "https://github.com/eirc/puppet-account/issues",
+    "operatingsystem_support": [
+        {
+            "operatingsystem": "Debian",
+            "operatingsystemrelease": [ "7.3" ]
+        }
+    ],
     "dependencies": [ ]
 }
