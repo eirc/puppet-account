@@ -9,6 +9,9 @@
 # [*groupname*]
 #   The name of the group. Defaults to the value of the title string.
 #
+# [*ensure*]
+#   Group ensure (present or absent) Default to present
+#
 # [*gid*]
 #   The gid to enforce on the group. If empty will do nothing. Defaults to ''.
 #
@@ -30,17 +33,18 @@
 #
 define account::group (
   $groupname = $title,
+  $ensure    = 'present',
   $gid       = '',
 ) {
 
   if $gid {
     group { $groupname:
-      ensure => present,
+      ensure => $ensure,
       gid    => $gid,
     }
   } else {
     group { $groupname:
-      ensure => present,
+      ensure => $ensure,
     }
   }
 }
