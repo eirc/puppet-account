@@ -82,11 +82,13 @@ describe 'accounts' do
         it 'should be able to passwordless ssh with private key' do
           shell "cat > /root/.ssh/id_rsa <<EOF\n#{RSA_PRIVATE_KEY}\nEOF\n"
           shell 'chmod 600 /root/.ssh/id_rsa'
+          shell 'ssh-keyscan -H localhost > /root/.ssh/known_hosts'
           shell 'ssh dude@localhost "whoami"' do |result|
             result.exit_code.should == 0
             result.output.split("\n").should == ['dude']
           end
           shell 'rm /root/.ssh/id_rsa'
+          shell 'rm /root/.ssh/known_hosts'
         end
       end
     end
