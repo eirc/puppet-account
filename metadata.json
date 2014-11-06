@@ -2,7 +2,7 @@
     "name": "eirc-account",
     "version": "0.1.0",
     "author": "eirc",
-    "summary": null,
+    "summary": "Helpers for managing users and groups with puppet.",
     "license": "Apache License, Version 2.0",
     "source": "https://github.com/eirc/puppet-account",
     "project_page": "https://github.com/eirc/puppet-account",
