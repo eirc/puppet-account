@@ -1,0 +1,3 @@
+fixtures:
+  symlinks:
+#    module name: "#{source_dir}" XXX

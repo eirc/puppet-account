@@ -1,0 +1,69 @@
+HOSTS:
+  fedora-18-x64-vbox4210-nocm:
+    roles:
+      - master
+    platform: fedora-18-x86_64
+    box: fedora-18-x64-vbox4210-nocm
+    box_url: http://puppet-vagrant-boxes.puppetlabs.com/fedora-18-x64-vbox4210-nocm.box
+    hypervisor: vagrant
+# XXX: This one doesn't work yet
+#  centos-59-x64-vbox4210-nocm:
+#    platform: centos-5-x86_64
+#    box: centos-59-x64-vbox4210-nocm
+#    box_url: http://puppet-vagrant-boxes.puppetlabs.com/centos-59-x64-vbox4210-nocm.box
+#    hypervisor: vagrant
+# XXX: This one doesn't work yet
+#  centos-510-x64-virtualbox-nocm:
+#    platform: centos-5-x86_64
+#    box: centos-510-x64-virtualbox-nocm
+#    box_url: http://puppet-vagrant-boxes.puppetlabs.com/centos-510-x64-virtualbox-nocm.box
+#    hypervisor: vagrant
+  centos-64-x64-vbox4210-nocm:
+    platform: centos-6-x86_64
+    box: centos-64-x64-vbox4210-nocm
+    box_url: http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210-nocm.box
+    hypervisor: vagrant
+  centos-65-x64-virtualbox-nocm:
+    platform: centos-6-x86_64
+    box: centos-65-x64-virtualbox-nocm
+    box_url: http://puppet-vagrant-boxes.puppetlabs.com/centos-65-x64-virtualbox-nocm.box
+    hypervisor: vagrant
+# XXX: This one doesn't work yet
+#  debian-607-x64-vbox4210-nocm:
+#    platform: debian-6-amd64
+#    box: debian-607-x64-vbox4210-nocm
+#    box_url: http://puppet-vagrant-boxes.puppetlabs.com/debian-607-x64-vbox4210-nocm.box
+#    hypervisor: vagrant
+  debian-70rc1-x64-vbox4210-nocm:
+    platform: debian-7-amd64
+    box: debian-70rc1-x64-vbox4210-nocm
+    box_url: http://puppet-vagrant-boxes.puppetlabs.com/debian-70rc1-x64-vbox4210-nocm.box
+    hypervisor: vagrant
+  debian-73-x64-virtualbox-nocm:
+    platform: debian-7-amd64
+    box: debian-73-x64-virtualbox-nocm
+    box_url: http://puppet-vagrant-boxes.puppetlabs.com/debian-73-x64-virtualbox-nocm.box
+    hypervisor: vagrant
+  sles-11sp1-x64-vbox4210-nocm:
+    platform: sles-11-x86_64
+    box: sles-11sp1-x64-vbox4210-nocm
+    box_url: http://puppet-vagrant-boxes.puppetlabs.com/sles-11sp1-x64-vbox4210-nocm.box
+    hypervisor: vagrant
+# XXX: This one doesn't work yet
+#  ubuntu-server-10044-x64-vbox4210-nocm:
+#    platform: ubuntu-10.04-amd64
+#    box: ubuntu-server-10044-x64-vbox4210-nocm
+#    box_url: http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-10044-x64-vbox4210-nocm.box
+#    hypervisor: vagrant
+  ubuntu-server-12042-x64-vbox4210-nocm:
+    platform: ubuntu-12.04-amd64
+    box: ubuntu-server-12042-x64-vbox4210-nocm
+    box_url: http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210-nocm.box
+    hypervisor: vagrant
+  ubuntu-1310-x64-virtualbox-nocm:
+    platform: ubuntu-13.10-amd64
+    box: ubuntu-1310-x64-virtualbox-nocm
+    box_url: http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-1310-x64-virtualbox-nocm.box
+    hypervisor: vagrant
+CONFIG:
+  type: foss
