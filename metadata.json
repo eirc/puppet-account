@@ -1,6 +1,6 @@
 {
     "name": "eirc-account",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "author": "eirc",
     "summary": "Helpers for managing users and groups with puppet.",
     "tags": [ "user", "group", "account", "debian", "ssh" ],
