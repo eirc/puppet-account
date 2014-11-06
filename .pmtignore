@@ -1,0 +1,9 @@
+spec/
+tests/
+.fixtures.yml
+.ruby-gemset
+.ruby-version
+Gemfile
+Gemfile.lock
+Guardfile
+Rakefile

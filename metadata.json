@@ -1,13 +1,11 @@
 {
-  "name": "puppet-account",
-  "version": "0.1.0",
-  "author": "eirc",
-  "summary": null,
-  "license": "Apache 2.0",
-  "source": "https://github.com/eirc/puppet-account",
-  "project_page": "https://github.com/eirc/puppet-account",
-  "issues_url": "https://github.com/eirc/puppet-account/issues",
-  "dependencies": [
-    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
-  ]
+    "name": "eirc-account",
+    "version": "0.1.0",
+    "author": "eirc",
+    "summary": null,
+    "license": "Apache License, Version 2.0",
+    "source": "https://github.com/eirc/puppet-account",
+    "project_page": "https://github.com/eirc/puppet-account",
+    "issues_url": "https://github.com/eirc/puppet-account/issues",
+    "dependencies": [ ]
 }
