@@ -2,7 +2,9 @@ source 'https://rubygems.org'
 
 group :development, :test do
   gem 'rake'
-  gem 'puppet'
+  puppetversion = ENV.key?('PUPPET_VERSION') ? "= #{ENV['PUPPET_VERSION']}" : ['>= 3.3']
+  gem 'puppet', puppetversion
+  gem 'facter', '>= 1.7.0'
   gem 'puppetlabs_spec_helper'
   gem 'guard-rake'
 
