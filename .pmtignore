@@ -1,3 +1,6 @@
+pkg/
+.vagrant
+*.iml
 spec/
 tests/
 .fixtures.yml
